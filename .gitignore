@@ -1,0 +1,5 @@
+.DS_store
+venv
+flagged
+password.txt
+__pycache__
