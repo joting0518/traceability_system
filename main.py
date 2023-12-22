@@ -43,7 +43,7 @@ def insert_demander(id_to_update, new_demander):
         # 更新 demander 欄位
         record_to_update.demander = new_demander
     
-        # 提交更改到數據庫
+        # 提交更改到db
         session.commit()
     else:
         print(f"No record with id {id_to_update} found.")
@@ -100,7 +100,7 @@ demander=random.choice(["companye","companyf","companyg","companyh"]))
 
 # Gradio 函數包裝器
 def gradio_create_batch_product_and_items(supplier, product_name, number_of_cloth):
-    # 調用您的 SQLAlchemy 函數
+    # 調用 SQLAlchemy 函數
     create_batch_product_and_items(session, supplier, product_name, number_of_cloth)
     return "Batch product and items created successfully!"
 
